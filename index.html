@@ -3,138 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Garagem do Theus - Global Truck</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <title>Terminal Hacker - Global Truck</title>
   <style>
     body {
+      background-color: #000;
+      color: #00ff99;
+      font-family: 'Courier New', Courier, monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
       margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #2c2c2c; /* fundo cinza chumbo */
-      color: #fff;
-      text-align: center;
     }
 
-    header {
-      padding: 30px 20px;
-      animation: flutuar 4s ease-in-out infinite;
+    .terminal {
+      font-size: 1.6rem;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #00ff99;
+      width: 0;
+      animation:
+        typing 4s steps(40, end) forwards,
+        blink 0.7s infinite;
     }
 
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-      color: #80dfff; /* azul bebê */
-      text-shadow: 0 0 10px #80dfff;
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 28ch; } /* número de caracteres do texto abaixo */
     }
 
-    .subtitulo {
-      font-size: 1.2rem;
-      opacity: 0.85;
-      animation: flutuar 4s ease-in-out infinite;
-    }
-
-    .titulo-caminhao {
-      font-size: 1.5rem;
-      color: #80dfff;
-      margin: 40px 0 10px;
-      text-shadow: 0 0 8px #80dfff;
-      animation: flutuar 4s ease-in-out infinite;
-    }
-
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .galeria img {
-      width: 100%;
-      border-radius: 16px;
-      height: 200px;
-      object-fit: cover;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-      animation: flutuar 4s ease-in-out infinite;
-      transition: transform 0.3s ease;
-    }
-
-    .galeria img:hover {
-      transform: scale(1.03);
-    }
-
-    .numero-caminhao {
-      background-color: rgba(255, 255, 255, 0.9);
-      color: #80dfff;
-      font-weight: bold;
-      padding: 4px 10px;
-      border-radius: 10px;
-      display: inline-block;
-      margin: 8px auto;
-      font-size: 0.9rem;
-      animation: flutuar 4s ease-in-out infinite;
-    }
-
-    footer {
-      padding: 30px 20px;
-      font-size: 1rem;
-      color: #ccc;
-      animation: flutuar 4s ease-in-out infinite;
-    }
-
-    /* Animação de flutuação suave */
-    @keyframes flutuar {
-      0%   { transform: translateY(0); }
-      50%  { transform: translateY(-5px); }
-      100% { transform: translateY(0); }
+    @keyframes blink {
+      0%, 100% { border-color: transparent; }
+      50% { border-color: #00ff99; }
     }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>Garagem do Theus 🚛💊</h1>
-    <p class="subtitulo">Minhas máquinas no Global Truck</p>
-  </header>
-
-  <div class="galeria">
-    <div class="titulo-caminhao">BOB CONSTELLATION 💊🚛</div>
-    <div>
-      <div class="numero-caminhao">Caminhão 1</div>
-      <img src="global_truck_online_screenshot_20250613_222541.png" alt="Caminhão 1">
-    </div>
-    <div>
-      <div class="numero-caminhao">Caminhão 2</div>
-      <img src="global_truck_online_screenshot_20250613_222551.png" alt="Caminhão 2">
-    </div>
-
-    <div class="titulo-caminhao">VOLVO FH 540 💊🚛</div>
-    <div>
-      <div class="numero-caminhao">Caminhão 3</div>
-      <img src="B2331D69-E9A9-42A1-B32D-DFAB5AD431E9_Original.jpeg" alt="Caminhão 3">
-    </div>
-    <div>
-      <div class="numero-caminhao">Caminhão 4</div>
-      <img src="869B4764-0510-4C0A-9A0F-068DB4C4A83F_Original.jpeg" alt="Caminhão 4">
-    </div>
-
-    <div class="titulo-caminhao">OUTROS MODELOS</div>
-    <div>
-      <div class="numero-caminhao">Caminhão 5</div>
-      <img src="caminhao5.jpg" alt="Caminhão 5">
-    </div>
-    <div>
-      <div class="numero-caminhao">Caminhão 6</div>
-      <img src="caminhao6.jpg" alt="Caminhão 6">
-    </div>
-  </div>
-
-  <footer>
-    © 2025 - Theus no comando da boleia 💊🚛
-    - Todos direitos reservados - CNPJ 00.000.000/0000-00 - 
-    Pr 412, 3ª loja, Paraná, Pontal Do Paraná
-  </footer>
-
+  <div class="terminal">Carregando dados do caminhão... 🚛💊</div>
 </body>
 </html>
