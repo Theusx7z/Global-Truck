@@ -2,91 +2,122 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Meus Caminhões - Global Truck</title>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Garagem do Theus - Global Truck</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: #111;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff4081, #ff7bbd);
       color: #fff;
-      font-family: 'Rubik', sans-serif;
       text-align: center;
     }
 
-    h1 {
-      margin-top: 40px;
-      font-size: 2.5rem;
-      color: #00ffcc;
-      text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
-      animation: brilho 2s ease-in-out infinite alternate;
+    header {
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .subtitulo {
+      font-size: 1.2rem;
+      opacity: 0.9;
     }
 
     .titulo-caminhao {
-      font-size: 1.8rem;
-      color: #ff4081;
+      font-size: 1.5rem;
+      color: #fff;
       margin: 40px 0 10px;
-      text-shadow: 0 0 8px #ff4081;
-    }
-
-    @keyframes brilho {
-      0% { text-shadow: 0 0 10px #00ffcc; }
-      100% { text-shadow: 0 0 25px #00ffcc; }
+      text-shadow: 0 0 8px #fff;
     }
 
     .galeria {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
-      padding: 40px;
+      padding: 20px;
       max-width: 1200px;
       margin: auto;
     }
 
     .galeria img {
       width: 100%;
+      border-radius: 16px;
       height: 200px;
       object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 255, 204, 0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
     }
 
     .galeria img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(0, 255, 204, 0.5);
+      transform: scale(1.03);
     }
 
     footer {
-      margin-top: 40px;
-      padding: 20px;
+      padding: 30px 20px;
+      font-size: 1rem;
+      color: #ffeef5;
+    }
+
+    /* Número nos caminhões */
+    .numero-caminhao {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #ff4081;
+      font-weight: bold;
+      padding: 4px 10px;
+      border-radius: 10px;
+      display: inline-block;
+      margin: 8px auto;
       font-size: 0.9rem;
-      color: #aaa;
     }
   </style>
 </head>
 <body>
 
-  <h1>Meus Caminhões - Global Truck</h1>
+  <header>
+    <h1>Garagem do Theus 🚛💊</h1>
+    <p class="subtitulo">Minhas máquinas no Global Truck</p>
+  </header>
 
   <div class="galeria">
     <div class="titulo-caminhao">BOB CONSTELLATION 💊🚛</div>
-    <img src="global_truck_online_screenshot_20250613_222541.png" alt="Caminhão 1">
-    <img src="global_truck_online_screenshot_20250613_222551.png" alt="Caminhão 2">
+    <div>
+      <div class="numero-caminhao">Caminhão 1</div>
+      <img src="global_truck_online_screenshot_20250613_222541.png" alt="Caminhão 1">
+    </div>
+    <div>
+      <div class="numero-caminhao">Caminhão 2</div>
+      <img src="global_truck_online_screenshot_20250613_222551.png" alt="Caminhão 2">
+    </div>
 
     <div class="titulo-caminhao">VOLVO FH 540 💊🚛</div>
-    <img src="B2331D69-E9A9-42A1-B32D-DFAB5AD431E9_Original.jpeg" alt="Caminhão 3">
-    <img src="869B4764-0510-4C0A-9A0F-068DB4C4A83F_Original.jpeg" alt="Caminhão 4">
+    <div>
+      <div class="numero-caminhao">Caminhão 3</div>
+      <img src="B2331D69-E9A9-42A1-B32D-DFAB5AD431E9_Original.jpeg" alt="Caminhão 3">
+    </div>
+    <div>
+      <div class="numero-caminhao">Caminhão 4</div>
+      <img src="869B4764-0510-4C0A-9A0F-068DB4C4A83F_Original.jpeg" alt="Caminhão 4">
+    </div>
 
-    <!-- Outras imagens sem título -->
-    <img src="caminhao5.jpg" alt="Caminhão 5">
-    <img src="caminhao6.jpg" alt="Caminhão 6">
+    <div class="titulo-caminhao">OUTROS MODELOS</div>
+    <div>
+      <div class="numero-caminhao">Caminhão 5</div>
+      <img src="caminhao5.jpg" alt="Caminhão 5">
+    </div>
+    <div>
+      <div class="numero-caminhao">Caminhão 6</div>
+      <img src="caminhao6.jpg" alt="Caminhão 6">
+    </div>
   </div>
 
   <footer>
-    © 2025 - Global Truck Online por Theus 🚛
-    Politica De Privacidade Interna
+    © 2025 - Theus no comando da boleia 💊🚛
   </footer>
 
 </body>
