@@ -10,7 +10,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #ff4081, #ff7bbd);
+      background: #2c2c2c; /* cinza chumbo escuro */
       color: #fff;
       text-align: center;
     }
@@ -22,18 +22,20 @@
     header h1 {
       font-size: 2.8rem;
       margin-bottom: 10px;
+      color: #ff4081;
+      text-shadow: 0 0 10px #ff4081;
     }
 
     .subtitulo {
       font-size: 1.2rem;
-      opacity: 0.9;
+      opacity: 0.8;
     }
 
     .titulo-caminhao {
       font-size: 1.5rem;
-      color: #fff;
+      color: #ff4081;
       margin: 40px 0 10px;
-      text-shadow: 0 0 8px #fff;
+      text-shadow: 0 0 8px #ff4081;
     }
 
     .galeria {
@@ -50,7 +52,8 @@
       border-radius: 16px;
       height: 200px;
       object-fit: cover;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      animation: flutuar 4s ease-in-out infinite;
       transition: transform 0.3s ease;
     }
 
@@ -61,10 +64,9 @@
     footer {
       padding: 30px 20px;
       font-size: 1rem;
-      color: #ffeef5;
+      color: #ccc;
     }
 
-    /* Número nos caminhões */
     .numero-caminhao {
       background-color: rgba(255, 255, 255, 0.9);
       color: #ff4081;
@@ -74,6 +76,13 @@
       display: inline-block;
       margin: 8px auto;
       font-size: 0.9rem;
+    }
+
+    /* Animação flutuante */
+    @keyframes flutuar {
+      0%   { transform: translateY(0px); }
+      50%  { transform: translateY(-5px); }
+      100% { transform: translateY(0px); }
     }
   </style>
 </head>
